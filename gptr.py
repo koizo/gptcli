@@ -40,7 +40,7 @@ def help():
     print("history: show the history of the conversation")
     print("run <command>: run a shell command")
 
-def get_output(command):
+def run_command(command):
     # Run the command and capture its output.
     process = subprocess.Popen(command.split(), stdout=subprocess.PIPE)
     output, error = process.communicate()
