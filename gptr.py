@@ -42,7 +42,7 @@ def help():
 
 def run_command(command):
     # Run the command and capture its output.
-    process = subprocess.Popen(command.split(), stdout=subprocess.PIPE)
+    process = subprocess.Popen(command.split(), stdout=subprocess.PIPE, shell=True)
     output, error = process.communicate()
     return output, error
 
